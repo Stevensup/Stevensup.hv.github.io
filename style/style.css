@@ -1,0 +1,257 @@
+/**
+ * FILEPATH: /Users/steve/Documents/DB1/StevenUsecheHV/style/style.css
+ * 
+ * This CSS file contains styles for a personal portfolio website.
+ * It includes font imports, body styles for day and night modes,
+ * a toggle button, container styles for the layout, profile and
+ * contact information styles, education and language styles, and
+ * about and skills section styles.
+ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body.day-mode {
+    background: rgb(67, 75, 78);
+    color: #333;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    display: flex;
+}
+
+body.night-mode {
+    background: #081921;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    display: flex;
+
+}
+
+#toggleButton {
+    background-color: #122a34;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border-radius: 50%; 
+    width: 60px; 
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#toggleButton:hover {
+    background-color: #0288d1;
+}
+
+
+.container{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    background: #fff;
+    margin: 50px;
+    display: grid;
+    grid-template-columns:1fr 2fr ;
+    box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+}
+.container .lado-izquierdo
+{
+    position: relative;
+    background: #000000;
+    padding: 40px;
+    width: 383px;
+}
+.textoPerfil{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.textoPerfil .imgBx {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.textoPerfil .imgBx .image-profile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7; 
+    transition: opacity 0.9s ease; 
+}
+
+.textoPerfil .imgBx:hover .image-profile {
+    opacity: 1; 
+}
+
+.textoPerfil h2{
+    color: #fff;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+.textoPerfil h2 span{
+    font-size: 0.8em;
+    font-weight: 300;
+}
+.contactInfo{
+    padding-top: 40px;
+}
+.titulo{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.contactInfo .skills{
+    position: relative;
+}
+.contactInfo .skills li{
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+.contactInfo ul li .icon{
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: #03a9f4;
+}
+.contactInfo ul li span{
+    color: #fff;
+    font-weight: 300;
+}
+.education li{
+    margin-bottom: 15px;
+}
+.education li h5{
+    color: #03a9f4;
+    font-weight: 500;
+}
+.education li h4:nth-child(2) {
+    color: #fff;
+    font-weight: 500;
+}
+.education li h4{
+    color: #fff;
+    font-weight: 300;
+}
+.language .percent{
+    position: relative;
+    width:100% ;
+    height: 6px;
+    background: #081921;
+    display: block;
+    margin-top: 5px;
+    border-radius:10px ;
+}
+.language .percent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #03a9f4;
+    border-radius: 10px;
+}
+.container .lado-derecho
+{
+    position: relative;
+    background: #fff;
+    padding: 40px;
+}
+
+.about{
+    margin-bottom: 40px;
+}
+.about:last-child{
+    margin-bottom: 0;
+}
+
+.title2{
+    color: #003147;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+.profile-description{
+    font-size: 14px;
+}
+p{
+    color: #333;
+    font-size: 12px;
+    text-align: justify;
+}
+.about .box{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+}
+.about .box .year-company{
+    min-width: 149px;
+    word-wrap: break-word;
+}
+.about .box .year-company h5{
+    text-transform: uppercase;
+    color: #848c90;
+    font-weight: 600;
+}
+.about .box .text h4{
+    text-transform: uppercase;
+    color: #2a7da2;
+    font-size: 16px;
+}
+.skills .box{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+}
+.skills .box h4 {
+    text-transform: uppercase;
+    color: #848c99;
+    font-weight: 500;
+}
+.skills .box .percent{
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+}
+.skills .box .percent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+    border-radius: 10px;
+}
